@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 api_patterns = [
-    path('users/', include('src.apps.users.api.urls')),
+    path('users/', include(('src.apps.users.api.urls', 'users'), namespace='users')),
 ]
 
 urlpatterns = [
