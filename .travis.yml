@@ -1,3 +1,5 @@
+dist: xenial
+
 language: python
 
 python:
@@ -7,7 +9,17 @@ python:
   - "3.8-dev"  # 3.8 development branch
   - "nightly"  # nightly build
 
-dist: xenial
+services:
+  - postgresql
+
+env:
+  - POSTGRES_DB=ci
+  - POSTGRES_USER=postgres
+  - POSTGRES_PASSWORD=postgres
+
+
+before_script:
+  - psql -c "CREATE DATABASE ci;" -U postgres
 
 install:
   - pip install pipenv
