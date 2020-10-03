@@ -13,4 +13,8 @@ INSTALLED_APPS = [
 
     # project apps
     'src.apps.users',
+    'src.apps.authors',
+    'src.apps.books',
+    'src.apps.libraries',
+    'src.apps.publishers',
 ]

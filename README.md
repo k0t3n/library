@@ -1,6 +1,6 @@
-# Example app
-[![Build Status](https://travis-ci.com/k0t3n/example_app.svg?token=AGBopXAgrQjGUVg2y7uR&branch=master)](https://travis-ci.com/k0t3n/example_app)
-[![codecov](https://codecov.io/gh/k0t3n/example_app/branch/master/graph/badge.svg?token=14IU5YEUBY)](https://codecov.io/gh/k0t3n/example_app)
+# Library app
+[![Build Status](https://travis-ci.com/k0t3n/library.svg?token=AGBopXAgrQjGUVg2y7uR&branch=master)](https://travis-ci.com/k0t3n/library)
+[![codecov](https://codecov.io/gh/k0t3n/library/branch/master/graph/badge.svg?token=14IU5YEUBY)](https://codecov.io/gh/k0t3n/library)
 
 This is Django application for showing common best practices that I've learned over the years using this framework.
 
