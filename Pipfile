@@ -4,6 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pytest = "*"
+codecov = "*"
+pytest-django = "*"
+pytest-cov = "*"
 
 [packages]
 django-split-settings = "==1.0.*"
