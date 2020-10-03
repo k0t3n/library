@@ -9,4 +9,4 @@ class Publisher(models.Model):
 
     class Meta:
         verbose_name = _('publisher')
-        verbose_name_plxural = _('publishers')
+        verbose_name_plural = _('publishers')
