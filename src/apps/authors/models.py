@@ -1,8 +1,10 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
+from src.utils.models import TimeStampedModelMixin
 
-class Author(models.Model):
+
+class Author(models.Model, TimeStampedModelMixin):
     first_name = models.CharField(
         max_length=64,
     )

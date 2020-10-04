@@ -3,7 +3,7 @@ from django.contrib import admin
 from src.apps.books.models import Book, BookAuthorship
 
 
-class BookAuthorshipInline(admin.TabularInline):
+class BookAuthorshipAdminInline(admin.TabularInline):
     model = BookAuthorship
     extra = 0
 
@@ -12,4 +12,4 @@ class BookAuthorshipInline(admin.TabularInline):
 class BookAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'publisher')
     filter_horizontal = ('authors',)
-    inlines = (BookAuthorshipInline,)
+    inlines = (BookAuthorshipAdminInline,)

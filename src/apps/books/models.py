@@ -3,9 +3,10 @@ from django.utils.translation import gettext as _
 
 from src.apps.authors.models import Author
 from src.apps.publishers.models import Publisher
+from src.utils.models import TimeStampedModelMixin
 
 
-class BookAuthorship(models.Model):
+class BookAuthorship(models.Model, TimeStampedModelMixin):
     book = models.ForeignKey(
         to='Book',
         on_delete=models.CASCADE,
@@ -24,7 +25,7 @@ class BookAuthorship(models.Model):
         return f'{self.book} - {self.author}'
 
 
-class Book(models.Model):
+class Book(models.Model, TimeStampedModelMixin):
     title = models.CharField(
         max_length=255,
     )

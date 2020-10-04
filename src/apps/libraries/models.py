@@ -2,9 +2,10 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 from src.apps.books.models import Book
+from src.utils.models import TimeStampedModelMixin
 
 
-class LibraryBook(models.Model):
+class LibraryBook(models.Model, TimeStampedModelMixin):
     library = models.ForeignKey(
         to='Library',
         on_delete=models.CASCADE,
@@ -16,7 +17,7 @@ class LibraryBook(models.Model):
     )
 
     quantity = models.PositiveIntegerField(
-        default=0,
+        default=1,
     )
 
     class Meta:
@@ -27,7 +28,7 @@ class LibraryBook(models.Model):
         return f'{self.library} - {self.book}'
 
 
-class Library(models.Model):
+class Library(models.Model, TimeStampedModelMixin):
     title = models.CharField(
         max_length=128,
     )
