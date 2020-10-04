@@ -27,7 +27,9 @@ install:
   - pipenv install --dev
 
 script:
-  - pytest
+  - python manage.py check
+  - python manage.py makemigrations --dry-run --check
+  - python manage.py test --noinput
 
 after_success:
   - codecov
