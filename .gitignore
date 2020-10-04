@@ -4,3 +4,4 @@ src/settings/local/*.py
 !src/settings/local/__init__.py
 htmlcov/
 .coverage
+coverage.xml
